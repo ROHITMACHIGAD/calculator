@@ -8,129 +8,136 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #424c55; /* Charcoal */
+    background-color: #508C9B; /* Background color */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    min-height: 100vh;      /* Full viewport height */
 }
 
 /* Styles for screens wider than 500px */
-@media(min-width:501px) {
-    * {
-        background-color: #424c55; /* Charcoal */
-    }
-    body {
-        display: flex;
-        justify-content: center; /* Centers horizontally */
-        align-items: center;    /* Centers vertically */
-        min-height: 100vh;      /* Full viewport height */
-        background-color: #424c55; /* Charcoal */
-    }
+@media (min-width: 501px) {
     .container {
         width: 400px;
         height: 685px;
-        background-color: #d1ccdc; /* Lavender Web */
+        background-color: #1B2430; /* Background color for container */
         border-radius: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 30px;
     }
+
     .display {
         width: 360px;
         height: 90px;
-        background-color: #f5edf0; /* Lavender Blush */
+        background-color: #FFFFFF; /* White for display */
+        color: #000000; /* Black text */
         text-align: center;
         border-radius: 10px;
         margin-bottom: 20px;
-    }
-    .text1 {
-        background-color: #f5edf0; /* Lavender Blush */
-        font-size: 50px;
+        font-size: 30px;
         line-height: 90px;
-        color: #3d2c2c; /* Van Dyke */
     }
+
     .numpad {
         display: grid;
         grid-template-columns: repeat(4, 75px);
         gap: 16px;
-        background-color: #886f68; /* Cinereous */
+        /* background-color: #1B2430; Dark background for numpad */
         padding: 20px;
     }
+
     .numpad > div {
-        background-color: #f5edf0; /* Lavender Blush */
+    margin-top: 13px ;
+        background-color: #F3F7EC; /* Light background for buttons */
         width: 75px;
         height: 75px;
         border-radius: 50%;
         text-align: center;
         line-height: 75px;
-        font-size: 20px;
-        color: #ffffff; /* Van Dyke */
+        font-size: 15px;
+        color: #3D2C2E; /* Text color */
+        box-shadow: 3px 3px 3px 3px black;
     }
-    .animate {
-        background-color: #f5edf0; /* Lavender Blush */
-        opacity: 0.5;
-    }
-    .numpad > div > h1 {
-        border-radius: 50%;
 
+    .numpad h1 {
+        color: #FF8F00; /* Default color for h1 inside numpad */
+    }
+
+    .plus h1, .minus h1, .multiply h1, .sqroot h1 {
+        color: #173b1c; /* Orange for operators */
+    }
+
+    .ac h1 {
+        color: #FF4C29; /* Red for 'AC' button */
+    }
+
+    .sq h1, .log h1, .ln h1, .del h1 {
+        color: #FF8F00; /* Orange for square, log, ln, delete */
+    }
+
+    .equalto h1 {
+        color: #000000; /* Black for equals button */
+    }
+
+    .animate {
+        background-color: #F5EDF0; /* Lavender Blush */
+        opacity: 0.5;
     }
 }
 
 /* Styles for screens up to 500px wide */
 @media (max-width: 500px) {
-    * {
-        background-color: #424c55; /* Charcoal */
-    }
     body {
-        display: flex;
-        justify-content: center; /* Centers horizontally */
-        align-items: center;    /* Centers vertically */
-        min-height: 100vh;      /* Full viewport height */
-        background-color: #424c55; /* Charcoal */
-        padding: 10px;
+        background-color: #000000; /* Black background */
     }
+
     .container {
         width: 90vw;
         height: auto;
         max-height: 90vh;
-        background-color: #d1ccdc; /* Lavender Web */
+        background-color: #1B2430; /* Dark background for container */
         border-radius: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
+
     .display {
         width: 100%;
         height: 90px;
-        background-color: #f5edf0; /* Lavender Blush */
+        background-color: #FFFFFF; /* White for display */
+        color: #000000; /* Black text */
         text-align: center;
         border-radius: 10px;
         margin-bottom: 20px;
-    }
-    .text1 {
-        background-color: #f5edf0; /* Lavender Blush */
-        font-size: 30px;
+        font-size: 20px;
         line-height: 90px;
-        color: #3d2c2c; /* Van Dyke */
     }
+
     .numpad {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
-        background-color: #e2c7c0; /* Cinereous */
+        background-color: #1B2430; /* Dark background for numpad */
     }
+
     .numpad > div {
-        background-color: #f5edf0; /* Lavender Blush */
+        background-color: #F3F7EC; /* Light background for buttons */
         width: 100%;
         height: 75px;
         border-radius: 50%;
         text-align: center;
         line-height: 75px;
         font-size: 15px;
-        color: #3d2c2c; /* Van Dyke */
+        color: #3D2C2E; /* Text color */
     }
+
     .animate {
-        background-color: #f5edf0; /* Lavender Blush */
+        background-color: #F5EDF0; /* Lavender Blush */
         opacity: 0.5;
     }
 }
